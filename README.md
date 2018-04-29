@@ -1,1 +1,1 @@
-All needed commits in one plase.
+All needed commits in one place.
