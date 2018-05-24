@@ -27,7 +27,3 @@ popd
 pushd $ANDROOT/device/rr/sepolicy
 git fetch https://github.com/LineageOS/android_device_lineage_sepolicy refs/changes/97/206797/5 && git cherry-pick FETCH_HEAD
 popd
-
-pushd $ANDROOT/hardware/qcom/display-caf/msm8998
-git revert --no-edit -m 1 6ecb2ed62fefc3efee5ec57539dec4e788ad157b
-popd
