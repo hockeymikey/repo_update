@@ -23,8 +23,3 @@ popd
 pushd $ANDROOT/build/make
 git fetch https://github.com/LineageOS/android_build refs/changes/71/206171/2 && git cherry-pick FETCH_HEAD
 popd
-
-pushd $ANDROOT/device/rr/sepolicy
-git fetch https://github.com/LineageOS/android_device_lineage_sepolicy refs/changes/27/212927/8 && git cherry-pick FETCH_HEAD
-git fetch https://github.com/LineageOS/android_device_lineage_sepolicy refs/changes/87/225587/2 && git cherry-pick FETCH_HEAD
-popd
