@@ -10,7 +10,9 @@ popd () {
     command popd "$@" > /dev/null
 }
 
-repo sync -j8 --current-branch --no-tags --force-sync
+if [ "$skip_sync" != "true" ]; then
+repo sync -j$(nproc) --current-branch --no-tags --force-sync
+fi
 
 pushd $ANDROOT/frameworks/opt/net/wifi
 git fetch https://github.com/LineageOS/android_frameworks_opt_net_wifi refs/changes/26/206926/3 && git cherry-pick FETCH_HEAD
